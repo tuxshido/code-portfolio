@@ -3,16 +3,10 @@ import { IdentificationIcon } from "@heroicons/react/solid";
 
 const PythonLogo = require("../assets/logos/PythonLogo.png");
 const ReactLogo = require("../assets/logos/ReactLogo.png");
-//const TypescriptLogo = require("../assets/logos/TypescriptLogo.png");
 const JavaScriptLogo = require("../assets/logos/JsLogo.png");
-//const NextLogo = require("../assets/logos/NextLogo.png");
-//const TailwindLogo = require("../assets/logos/TailwindLogo.png");
 const MysqlLogo = require("../assets/logos/MysqlLogo.png");
-//const ReduxLogo = require("../assets/logos/ReduxLogo.png");
 const FirebaseLogo = require("../assets/logos/FirebaseLogo.png");
-//const MongoDBLogo = require("../assets/logos/MongoDBLogo.png");
 const NodejsLogo = require("../assets/logos/NodeJSLogo.png");
-//const DockerLogo = require("../assets/logos/DockerLogo.png");
 const PhpMyAdminLogo = require("../assets/logos/PhpmyadminLogo.png");
 const GItLogo = require("../assets/logos/GitSoftLogo.png");
 const PHPLogo = require("../assets/logos/PhpLogo.png");

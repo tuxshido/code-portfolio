@@ -25,12 +25,10 @@ const Home = () => {
         "resume",
         "contact",
     ]);
-    console.log(showPage);
     return (
         <div id="home" className="App flex h-max bg-[#1e1e1e]">
             <div className="bg-[#262526] fixed h-full hidden lg:block">
                 <LeftBar
-                    showPage={showPage}
                     setShowPage={setShowPage}
                     hidePage={hidePage}
                     setHidePage={setHidePage}
@@ -38,7 +36,12 @@ const Home = () => {
             </div>
             <div className="bg-[#1e1e1e] lg:pl-72 h-full ">
                 <div className="lg:hidden">
-                    <MobileMenu />
+                    <MobileMenu
+                        showPage={showPage}
+                        setShowPage={setShowPage}
+                        hidePage={hidePage}
+                        setHidePage={setHidePage}
+                    />
                 </div>
                 <div className="bg-[#424042] h-16 w-full fixed hidden lg:block">
                     <NavBar

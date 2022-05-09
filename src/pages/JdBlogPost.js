@@ -17,43 +17,44 @@ const JdBlogPost = () => {
                 <code className="table-cell text-[#e6f1ff] text-3xl mt-5 whitespace-nowrap">
                     Jd-blogpost
                 </code>
-                <div className="table-cell border-b border-b-[#e6f1ff] border-opacity-25 w-full"></div>
-                <div className="flex flex-row  mb-3">
-                    <img
-                        src={PythonLogo}
-                        alt="Python logo"
-                        className="h-6 w-6 mr-2 text-yellow_vs"
-                    />
-                    <img
-                        src={FlaskLogo}
-                        alt="Flask logo"
-                        className="h-6 w-6 mr-2 text-yellow_vs"
-                    />
-                    <img
-                        src={JsLogo}
-                        alt="Flask logo"
-                        className="h-6 w-6 mr-2 text-yellow_vs"
-                    />
-                    <img
-                        src={SqlaLogo}
-                        alt="SQLAlchemist logo"
-                        className="h-6 w-6 mr-2 text-yellow_vs"
-                    />
-                    <img
-                        src={GoogLogo}
-                        alt="Google Sign-in logo"
-                        className="h-6 w-6 mr-2 text-yellow_vs"
-                    />
-                    <img
-                        src={BootLogo}
-                        alt="Python logo"
-                        className="h-6 w-6 mr-2 text-yellow_vs"
-                    />
+                <div className="table-cell border-b border-b-[#e6f1ff] border-opacity-25 w-full">
+                    <div className="flex flex-row  mb-3 float-right">
+                        <img
+                            src={PythonLogo}
+                            alt="Python logo"
+                            className="h-6 w-6 mr-2 text-yellow_vs"
+                        />
+                        <img
+                            src={FlaskLogo}
+                            alt="Flask logo"
+                            className="h-6 w-6 mr-2 text-yellow_vs"
+                        />
+                        <img
+                            src={JsLogo}
+                            alt="Flask logo"
+                            className="h-6 w-6 mr-2 text-yellow_vs"
+                        />
+                        <img
+                            src={SqlaLogo}
+                            alt="SQLAlchemist logo"
+                            className="h-6 w-6 mr-2 text-yellow_vs"
+                        />
+                        <img
+                            src={GoogLogo}
+                            alt="Google Sign-in logo"
+                            className="h-6 w-6 mr-2 text-yellow_vs"
+                        />
+                        <img
+                            src={BootLogo}
+                            alt="Python logo"
+                            className="h-6 w-6 mr-2 text-yellow_vs"
+                        />
+                    </div>
                 </div>
             </div>
             <div className="text-[#a2aabc] text-lg mt-5 mx-12 lg:mx-60 flex flex-col items-center text-justify">
                 <code>
-                    It is a blogpost meant to share snippets and short-code.{" "}
+                    Jd-blogpost is designed to share snippets and short-code.{" "}
                     <br />
                     It is build with flask, SQLAlchemist and bootstrap. Any user
                     can search and resd posts but you need to authenticate with

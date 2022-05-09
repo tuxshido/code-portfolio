@@ -3,17 +3,14 @@ import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/solid";
 
 const GitLogo = require("../assets/logos/GitLogo.png");
 const LKLogo = require("../assets/logos/LinkedinLogo.png");
-// const KaggleLogo = require("../assets/logos/KaggleLogo.png");
 const MailLogo = require("../assets/logos/MailLogo.png");
-//const LILogo = require("../assets/logos/LinkedinLogo.png");
-//const TSIcon = require("../assets/icons/TSIcon.png");
 const RELogo = require("../assets/logos/ReactLogo.png");
 const PYLogo = require("../assets/logos/PythonLogo.png");
 const PHLogo = require("../assets/logos/PhpLogo.png");
 const INLogo = require("../assets/logos/InfoLogo.png");
 const CVLogo = require("../assets/logos/CvLogo.png");
 
-const LeftBar = ({ showPage, setShowPage, hidePage, setHidePage }) => {
+const LeftBar = ({ setShowPage, hidePage, setHidePage }) => {
     const [showReactTeamList, SetShowReactTeamList] = useState(true);
     const [showReactList, SetShowReactList] = useState(true);
     const [showPythonList, SetShowPythonList] = useState(true);
@@ -25,7 +22,6 @@ const LeftBar = ({ showPage, setShowPage, hidePage, setHidePage }) => {
     const RenderItemList = (titleLogo, titleName, titlePage) => (
         <div>
             <button
-                href="#"
                 onClick={(e) => {
                     e.stopPropagation();
                     setHidePage(hidePage.filter((item) => item !== titlePage));
@@ -135,7 +131,7 @@ const LeftBar = ({ showPage, setShowPage, hidePage, setHidePage }) => {
                         <div
                             className="flex items-center hover:cursor-pointer hover:bg-opacity-80 hover:bg-[#2b2a2a] font-bold w-72"
                             onClick={() =>
-                                SetShowReactList(!showReactTeamList)
+                                SetShowReactTeamList(!showReactTeamList)
                             }>
                             {showReactTeamList ? (
                                 <ChevronDownIcon className="w-7 mr-1  ml-5" />

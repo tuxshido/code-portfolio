@@ -17,39 +17,40 @@ const PhotoReact = () => {
                 <code className="table-cell text-[#e6f1ff] text-3xl mt-5 whitespace-nowrap">
                     Prophoto-React
                 </code>
-                <div className="table-cell border-b border-b-[#e6f1ff] border-opacity-25 w-full"></div>
-                <div className="flex flex-row  mb-3">
-                    <img
-                        src={ReactLogo}
-                        alt="React logo"
-                        className="h-6 w-6 mr-2 text-yellow_vs"
-                    />
-                    <img
-                        src={JsxLogo}
-                        alt="Jsx logo"
-                        className="h-6 w-6 mr-2 text-yellow_vs"
-                    />
-                    <img
-                        src={FireLogo}
-                        alt="Bootstrap logo"
-                        className="h-6 w-6 mr-2 text-yellow_vs"
-                    />
-                    <img
-                        src={GoogLogo}
-                        alt="Bootstrap logo"
-                        className="h-6 w-6 mr-2 text-yellow_vs"
-                    />
-                    <img
-                        src={BootLogo}
-                        alt="Bootstrap logo"
-                        className="h-6 w-6 mr-2 text-yellow_vs"
-                    />
+                <div className="table-cell border-b border-b-[#e6f1ff] border-opacity-25 w-full">
+                    <div className="flex flex-row  mb-3 float-right">
+                        <img
+                            src={ReactLogo}
+                            alt="React logo"
+                            className="h-6 w-6 mr-2 text-yellow_vs"
+                        />
+                        <img
+                            src={JsxLogo}
+                            alt="Jsx logo"
+                            className="h-6 w-6 mr-2 text-yellow_vs"
+                        />
+                        <img
+                            src={FireLogo}
+                            alt="Bootstrap logo"
+                            className="h-6 w-6 mr-2 text-yellow_vs"
+                        />
+                        <img
+                            src={GoogLogo}
+                            alt="Bootstrap logo"
+                            className="h-6 w-6 mr-2 text-yellow_vs"
+                        />
+                        <img
+                            src={BootLogo}
+                            alt="Bootstrap logo"
+                            className="h-6 w-6 mr-2 text-yellow_vs"
+                        />
 
-                    <img
-                        src={TrelloLogo}
-                        alt="Bootstrap logo"
-                        className="h-6 w-6 mr-2 text-yellow_vs"
-                    />
+                        <img
+                            src={TrelloLogo}
+                            alt="Bootstrap logo"
+                            className="h-6 w-6 mr-2 text-yellow_vs"
+                        />
+                    </div>
                 </div>
             </div>
             <div className="text-[#a2aabc] text-lg mt-5 mx-12 lg:mx-60 flex flex-col items-center text-justify">

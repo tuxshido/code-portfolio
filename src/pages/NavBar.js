@@ -42,14 +42,14 @@ const ActiveContainer = tw.div`
 
 const NavBar = ({ showPage, setShowPage, hidePage, setHidePage }) => {
     const tabsInfo = [
-        [INLogo, "about", "About"],
-        [CVLogo, "resume", "Resume"],
-        [MailLogo, "contact", "Contact"],
-        [RELogo, "photoreact", "Prophoto-react"],
-        [RELogo, "cryptoinfo", "Crypto-info"],
-        [RELogo, "githubusers", "Search-github-users"],
-        [PYLogo, "jdblogpost", "Jd-blogpost"],
-        [PHLogo, "prophoto", "Prophoto"],
+        { logo: INLogo, tab: "about", name: "About" },
+        { logo: CVLogo, tab: "resume", name: "Resume" },
+        { logo: MailLogo, tab: "contact", name: "Contact" },
+        { logo: RELogo, tab: "photoreact", name: "Prophoto-react" },
+        { logo: RELogo, tab: "cryptoinfo", name: "Crypto-info" },
+        { logo: RELogo, tab: "githubusers", name: "Search-github-users" },
+        { logo: PYLogo, tab: "jdblogpost", name: "Jd-blogpost" },
+        { logo: PHLogo, tab: "prophoto", name: "Prophoto" },
     ];
 
     return (
@@ -80,20 +80,19 @@ const NavBar = ({ showPage, setShowPage, hidePage, setHidePage }) => {
                 </Container>
             )}
             {tabsInfo.map((item, index) => (
-                <>
-                    {hidePage.includes(item[1]) ? null : showPage ===
-                      item[1] ? (
+                <div key={index}>
+                    {hidePage.includes(item.tab) ? null : showPage ===
+                      item.tab ? (
                         <ActiveContainer
                             onClick={() => {
-                                setShowPage(item[1]);
-                            }}
-                            key={index}>
+                                setShowPage(item.tab);
+                            }}>
                             <img
-                                src={item[0]}
-                                alt={item[1]}
+                                src={item.logo}
+                                alt={item.tab}
                                 className="w-7 mr-1  text-yellow_vs"
                             />
-                            {item[2]}
+                            {item.name}
                             <XIcon
                                 className="w-6 ml-4 hover:bg-gray-600 hover:rounded"
                                 onClick={(e) => {
@@ -101,7 +100,7 @@ const NavBar = ({ showPage, setShowPage, hidePage, setHidePage }) => {
                                     setShowPage("home");
                                     setHidePage((prevState) => [
                                         ...prevState,
-                                        item[1],
+                                        item.tab,
                                     ]);
                                 }}
                             />
@@ -109,14 +108,14 @@ const NavBar = ({ showPage, setShowPage, hidePage, setHidePage }) => {
                     ) : (
                         <Container
                             onClick={() => {
-                                setShowPage(item[1]);
+                                setShowPage(item.tab);
                             }}>
                             <img
-                                src={item[0]}
-                                alt="item[1]"
+                                src={item.logo}
+                                alt={item.tab}
                                 className="w-7 mr-1  text-yellow_vs"
                             />
-                            {item[2]}
+                            {item.name}
                             <XIcon
                                 className="w-6 ml-4 hover:bg-gray-600 hover:rounded"
                                 onClick={(e) => {
@@ -124,13 +123,13 @@ const NavBar = ({ showPage, setShowPage, hidePage, setHidePage }) => {
                                     setShowPage("home");
                                     setHidePage((prevState) => [
                                         ...prevState,
-                                        item[1],
+                                        item.tab,
                                     ]);
                                 }}
                             />
                         </Container>
                     )}
-                </>
+                </div>
             ))}
         </div>
     );
