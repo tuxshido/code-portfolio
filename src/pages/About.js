@@ -16,20 +16,26 @@ const VimLogo = require("../assets/logos/VimLogo.png");
 const VSCodeLogo = require("../assets/logos/VSCLogo.png");
 const TrelloLogo = require("../assets/logos/TrelloLogo.png");
 const BootstrapLogo = require("../assets/logos/BootstrapLogo.png");
+const NTLogo = require("../assets/logos/NetlifyLogo.png");
+const TSLogo = require("../assets/logos/TypescriptLogo.png");
+const DKLogo = require("../assets/logos/DockerLogo.png");
 
 const About = () => {
     const skillsInfo = [
         [JavaScriptLogo, "Javascript"],
+        [TSLogo, "Typescript"],
         [ReactLogo, "React"],
         [NodejsLogo, "Nodejs"],
+        [FirebaseLogo, "Firebase"],
         [MysqlLogo, "MySQL"],
         [PhpMyAdminLogo, "PhpMyAdmin"],
         [GItLogo, "Git"],
         [PythonLogo, "Python"],
-        [FirebaseLogo, "Firebase"],
         [PHPLogo, "PHP"],
         [BootstrapLogo, "Bootstrap"],
         [ApacheLogo, "Apache"],
+        [NTLogo, "Netlify"],
+        [DKLogo, "Docker"],
         [LinuxLogo, "Linux"],
         [VimLogo, "Vim"],
         [VSCodeLogo, "VSCode"],
@@ -39,7 +45,8 @@ const About = () => {
     return (
         <div
             id="About"
-            className="mx-12 mt-40 lg:mx-60 items-center justify-center lg:w-1/2 text-justify">
+            className="mx-12 mt-40 lg:mx-60 items-center justify-center lg:w-1/2 text-justify"
+        >
             <div>
                 <div className="table">
                     <IdentificationIcon className="h-5 w-5 mr-4 text-yellow_vs" />{" "}
@@ -55,8 +62,8 @@ const About = () => {
                         bootcamp at wcoding. Problem-solving and DIY mindset, I
                         love to learn new things. As a linux enthusiast, the
                         terminal is my friend. Before moving into development, I
-                        worked as a math teatcher for ten years and I Have a
-                        Master degree of Mathematics applied to computer
+                        worked as a math teatcher for over ten years and I have
+                        a Master degree of Mathematics applied to computer
                         science.
                     </code>
                     <br />

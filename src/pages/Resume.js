@@ -5,7 +5,8 @@ const Resume = () => {
     return (
         <div
             id="Resume"
-            className="lg:w-3/5 mt-40 mb-4 text-justify mx-12 lg:mr-60 lg:ml-auto">
+            className="lg:w-3/5 mt-40 mb-4 text-justify mx-12 lg:mr-60 lg:ml-auto"
+        >
             <div>
                 <div className="table">
                     <ClipboardListIcon className="h-5 w-5 mr-4 text-yellow_vs" />{" "}
@@ -42,11 +43,11 @@ const Resume = () => {
                         <code className="text-blue_vs">Mathematic Teacher</code>
                         <br />
                         <code className="italic text-sm text-lightblue_vs">
-                            Paris area, France and French School of Seoul{" "}
+                            French School of Seoul and Paris area{" "}
                         </code>
                         <br />
                         <code className="text-xs text-brown_vs">
-                            • 2009 - 2017
+                            • 2006 - 2017
                         </code>
                     </div>
                 </div>
@@ -63,7 +64,8 @@ const Resume = () => {
                             <a
                                 href="https://wcoding.com/"
                                 target="_blank"
-                                rel="noopener noreferrer">
+                                rel="noopener noreferrer"
+                            >
                                 Wcoding Institute, Seoul
                             </a>
                         </code>

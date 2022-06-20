@@ -3,7 +3,7 @@ import About from "./About";
 import Contact from "./Contact";
 import LeftBar from "./LeftBar";
 import Resume from "./Resume";
-import PhotoReact from "./PhotoReact";
+import Tocodelist from "./Tocodelist";
 import CryptoInfo from "./CryptoInfo";
 import GitHubUsers from "./GitHubUsers";
 import JdBlogPost from "./JdBlogPost";
@@ -15,11 +15,10 @@ import NavBar from "./NavBar";
 const Home = () => {
     const [showPage, setShowPage] = useState("home");
     const [hidePage, setHidePage] = useState([
-        "photoreact",
+        "tocodelist",
         "jdblogpost",
         "cryptoinfo",
         "githubusers",
-        "jdblogpost",
         "prophoto",
         "about",
         "resume",
@@ -64,8 +63,8 @@ const Home = () => {
                     <Resume id="Resume" />
                 ) : showPage === "contact" ? (
                     <Contact id="Contact" />
-                ) : showPage === "photoreact" ? (
-                    <PhotoReact id="PhotoReact" />
+                ) : showPage === "tocodelist" ? (
+                    <Tocodelist id="Tocodelist" />
                 ) : showPage === "cryptoinfo" ? (
                     <CryptoInfo id="CryptoInfo" />
                 ) : showPage === "githubusers" ? (

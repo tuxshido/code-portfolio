@@ -9,12 +9,11 @@ const PYLogo = require("../assets/logos/PythonLogo.png");
 const PHLogo = require("../assets/logos/PhpLogo.png");
 const INLogo = require("../assets/logos/InfoLogo.png");
 const CVLogo = require("../assets/logos/CvLogo.png");
+const TSLogo = require("../assets/logos/TypescriptLogo.png");
 
 const LeftBar = ({ setShowPage, hidePage, setHidePage }) => {
-    const [showReactTeamList, SetShowReactTeamList] = useState(true);
     const [showReactList, SetShowReactList] = useState(true);
     const [showPythonList, SetShowPythonList] = useState(true);
-    const [showPhpList, SetShowPhpList] = useState(true);
     const [showTeamPjList, SetShowTeamPjList] = useState(true);
     const [showProjectsList, SetShowProjectsList] = useState(true);
     const [showHomeList, SetShowHomeList] = useState(true);
@@ -26,7 +25,8 @@ const LeftBar = ({ setShowPage, hidePage, setHidePage }) => {
                     e.stopPropagation();
                     setHidePage(hidePage.filter((item) => item !== titlePage));
                     setShowPage(titlePage);
-                }}>
+                }}
+            >
                 <div className="ml-12 flex items-center hover:cursor-pointer hover:bg-opacity-80 hover:bg-[#2b2a2a] w-60">
                     <img
                         src={titleLogo}
@@ -49,13 +49,10 @@ const LeftBar = ({ setShowPage, hidePage, setHidePage }) => {
 
     const ReactList = () => (
         <>
+            {RenderItemList(TSLogo, "To-Code-List", "tocodelist")}
             {RenderItemList(RELogo, "Crypto-info", "cryptoinfo")}
             {RenderItemList(RELogo, "Search-github-users", "githubusers")}
         </>
-    );
-
-    const ReactTeamList = () => (
-        <>{RenderItemList(RELogo, "Prophoto-React", "photoreact")}</>
     );
 
     const PythonList = () => (
@@ -69,7 +66,8 @@ const LeftBar = ({ setShowPage, hidePage, setHidePage }) => {
             <div>
                 <div
                     className="flex items-center hover:cursor-pointer hover:bg-opacity-80 hover:bg-[#2b2a2a] font-bold w-72"
-                    onClick={() => SetShowHomeList(!showHomeList)}>
+                    onClick={() => SetShowHomeList(!showHomeList)}
+                >
                     {showHomeList ? (
                         <ChevronDownIcon className="w-7 mr-1" />
                     ) : (
@@ -80,7 +78,8 @@ const LeftBar = ({ setShowPage, hidePage, setHidePage }) => {
                 {showHomeList ? <HomeList /> : null}
                 <div
                     className="flex items-center hover:cursor-pointer hover:bg-opacity-80 hover:bg-[#2b2a2a] font-bold w-72"
-                    onClick={() => SetShowProjectsList(!showProjectsList)}>
+                    onClick={() => SetShowProjectsList(!showProjectsList)}
+                >
                     {showProjectsList ? (
                         <ChevronDownIcon className="w-7 mr-1" />
                     ) : (
@@ -92,7 +91,8 @@ const LeftBar = ({ setShowPage, hidePage, setHidePage }) => {
                     <>
                         <div
                             className="flex items-center hover:cursor-pointer hover:bg-opacity-80 hover:bg-[#2b2a2a] font-bold w-72"
-                            onClick={() => SetShowReactList(!showReactList)}>
+                            onClick={() => SetShowReactList(!showReactList)}
+                        >
                             {showReactList ? (
                                 <ChevronDownIcon className="w-7 mr-1  ml-5" />
                             ) : (
@@ -104,7 +104,8 @@ const LeftBar = ({ setShowPage, hidePage, setHidePage }) => {
                         {showReactList ? <ReactList /> : null}
                         <div
                             className="flex items-center hover:cursor-pointer hover:bg-opacity-80 hover:bg-[#2b2a2a] font-bold w-72"
-                            onClick={() => SetShowPythonList(!showPythonList)}>
+                            onClick={() => SetShowPythonList(!showPythonList)}
+                        >
                             {showPythonList ? (
                                 <ChevronDownIcon className="w-7 mr-1  ml-5" />
                             ) : (
@@ -118,44 +119,17 @@ const LeftBar = ({ setShowPage, hidePage, setHidePage }) => {
                 ) : null}
                 <div
                     className="flex items-center hover:cursor-pointer hover:bg-opacity-80 hover:bg-[#2b2a2a] font-bold w-72"
-                    onClick={() => SetShowTeamPjList(!showTeamPjList)}>
+                    onClick={() => SetShowTeamPjList(!showTeamPjList)}
+                >
                     {showTeamPjList ? (
                         <ChevronDownIcon className="w-7 mr-1" />
                     ) : (
                         <ChevronRightIcon className="w-7 mr-1" />
                     )}
-                    <p>Team Projects</p>
+                    <p>Team Project</p>
                 </div>
-                {showTeamPjList ? (
-                    <>
-                        <div
-                            className="flex items-center hover:cursor-pointer hover:bg-opacity-80 hover:bg-[#2b2a2a] font-bold w-72"
-                            onClick={() =>
-                                SetShowReactTeamList(!showReactTeamList)
-                            }>
-                            {showReactTeamList ? (
-                                <ChevronDownIcon className="w-7 mr-1  ml-5" />
-                            ) : (
-                                <ChevronRightIcon className="w-7 mr-1  ml-5" />
-                            )}
+                {showTeamPjList ? <PhpList /> : null}
 
-                            <p>React</p>
-                        </div>
-                        {showReactTeamList ? <ReactTeamList /> : null}
-                        <div
-                            className="flex items-center hover:cursor-pointer hover:bg-opacity-80 hover:bg-[#2b2a2a] font-bold w-72"
-                            onClick={() => SetShowPhpList(!showPhpList)}>
-                            {showPhpList ? (
-                                <ChevronDownIcon className="w-7 mr-1  ml-5" />
-                            ) : (
-                                <ChevronRightIcon className="w-7 mr-1  ml-5" />
-                            )}
-
-                            <p>PHP</p>
-                        </div>
-                        {showPhpList ? <PhpList /> : null}
-                    </>
-                ) : null}
                 <div className="absolute inset-x-0 bottom-10 ">
                     <div className="flex px-6 space-x-7">
                         <a href="https://github.com/tuxshido">

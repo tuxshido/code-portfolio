@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
     MenuIcon,
     XIcon,
-    CodeIcon,
     ChevronDownIcon,
     ChevronRightIcon,
 } from "@heroicons/react/solid";
@@ -12,14 +11,10 @@ const JSIcon = require("../assets/icons/JSIcon.png");
 const RELogo = require("../assets/logos/ReactLogo.png");
 const PYLogo = require("../assets/logos/PythonLogo.png");
 const PHLogo = require("../assets/logos/PhpLogo.png");
+const TSLogo = require("../assets/logos/TypescriptLogo.png");
 
 const MobileMenu = ({ showPage, setShowPage, hidePage, setHidePage }) => {
     const TeamPj = [
-        {
-            name: "Prophoto-react",
-            tab: "photoreact",
-            icon: RELogo,
-        },
         {
             name: "Prophoto",
             tab: "prophoto",
@@ -27,6 +22,11 @@ const MobileMenu = ({ showPage, setShowPage, hidePage, setHidePage }) => {
         },
     ];
     const personalPj = [
+        {
+            name: "To-code-list",
+            tab: "tocodelist",
+            icon: TSLogo,
+        },
         {
             name: "Crypto-info",
             tab: "cryptoinfo",
@@ -69,25 +69,27 @@ const MobileMenu = ({ showPage, setShowPage, hidePage, setHidePage }) => {
                         enterTo="transform scale-100 opacity-100"
                         leave="transition duration-75 ease-out"
                         leaveFrom="transform scale-100 opacity-100"
-                        leaveTo="transform scale-95 opacity-0">
+                        leaveTo="transform scale-95 opacity-0"
+                    >
                         <Disclosure.Panel className="">
                             <code className="px-2 pt-2 pb-3 space-y-1 text-white">
                                 <Disclosure.Button
                                     key="Home"
                                     as="a"
                                     className={classNames(
-                                        showPage == "home"
+                                        showPage === "home"
                                             ? "bg-gray-900 text-white"
                                             : "text-gray-300 hover:bg-gray-700 hover:text-white",
                                         "block px-3 py-2 rounded-md text-base font-medium"
                                     )}
                                     aria-current={
-                                        showPage == "home" ? "page" : undefined
+                                        showPage === "home" ? "page" : undefined
                                     }
                                     onClick={(e) => {
                                         e.stopPropagation();
                                         setShowPage("home");
-                                    }}>
+                                    }}
+                                >
                                     <div className="flex ml-6">
                                         <img
                                             src={JSIcon}
@@ -101,7 +103,8 @@ const MobileMenu = ({ showPage, setShowPage, hidePage, setHidePage }) => {
                                     className="mb-2 ml-4 font-bold flex text-xl"
                                     onClick={() =>
                                         SetShowPersonalList(!showPersonalList)
-                                    }>
+                                    }
+                                >
                                     {showPersonalList ? (
                                         <ChevronDownIcon className="w-7 mr-4" />
                                     ) : (
@@ -115,13 +118,13 @@ const MobileMenu = ({ showPage, setShowPage, hidePage, setHidePage }) => {
                                               key={item.name}
                                               as="a"
                                               className={classNames(
-                                                  showPage == item.tab
+                                                  showPage === item.tab
                                                       ? "bg-gray-900 text-white"
                                                       : "text-gray-300 hover:bg-gray-700 hover:text-white",
                                                   "block px-3 py-2 rounded-md text-base font-medium"
                                               )}
                                               aria-current={
-                                                  showPage == item.tab
+                                                  showPage === item.tab
                                                       ? "page"
                                                       : undefined
                                               }
@@ -134,7 +137,8 @@ const MobileMenu = ({ showPage, setShowPage, hidePage, setHidePage }) => {
                                                       )
                                                   );
                                                   setShowPage(item.tab);
-                                              }}>
+                                              }}
+                                          >
                                               <div className="flex ml-6">
                                                   <img
                                                       src={item.icon}
@@ -150,13 +154,14 @@ const MobileMenu = ({ showPage, setShowPage, hidePage, setHidePage }) => {
                                     className="mb-2 ml-4 font-bold flex text-xl"
                                     onClick={() =>
                                         SetShowTeamList(!showTeamList)
-                                    }>
+                                    }
+                                >
                                     {showTeamList ? (
                                         <ChevronDownIcon className="w-7 mr-4" />
                                     ) : (
                                         <ChevronRightIcon className=" w-7 mr-4 " />
                                     )}
-                                    Team Projects
+                                    Team Project
                                 </div>
                                 {showTeamList
                                     ? TeamPj.map((item) => (
@@ -164,13 +169,13 @@ const MobileMenu = ({ showPage, setShowPage, hidePage, setHidePage }) => {
                                               key={item.name}
                                               as="a"
                                               className={classNames(
-                                                  showPage == item.tab
+                                                  showPage === item.tab
                                                       ? "bg-gray-900 text-white"
                                                       : "text-gray-300 hover:bg-gray-700 hover:text-white",
                                                   "block px-3 py-2 rounded-md text-base font-medium"
                                               )}
                                               aria-current={
-                                                  showPage == item.tab
+                                                  showPage === item.tab
                                                       ? "page"
                                                       : undefined
                                               }
@@ -183,7 +188,8 @@ const MobileMenu = ({ showPage, setShowPage, hidePage, setHidePage }) => {
                                                       )
                                                   );
                                                   setShowPage(item.tab);
-                                              }}>
+                                              }}
+                                          >
                                               <div className="flex ml-6">
                                                   <img
                                                       src={item.icon}

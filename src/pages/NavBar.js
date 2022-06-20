@@ -1,6 +1,6 @@
 import React from "react";
 import tw from "tailwind-styled-components";
-import { CogIcon, XIcon } from "@heroicons/react/solid";
+import { XIcon } from "@heroicons/react/solid";
 
 const MailLogo = require("../assets/logos/MailLogo.png");
 const JSIcon = require("../assets/icons/JSIcon.png");
@@ -9,6 +9,7 @@ const PYLogo = require("../assets/logos/PythonLogo.png");
 const PHLogo = require("../assets/logos/PhpLogo.png");
 const INLogo = require("../assets/logos/InfoLogo.png");
 const CVLogo = require("../assets/logos/CvLogo.png");
+const TSLogo = require("../assets/logos/TypescriptLogo.png");
 
 const Container = tw.div`
   h-full 
@@ -45,7 +46,7 @@ const NavBar = ({ showPage, setShowPage, hidePage, setHidePage }) => {
         { logo: INLogo, tab: "about", name: "About" },
         { logo: CVLogo, tab: "resume", name: "Resume" },
         { logo: MailLogo, tab: "contact", name: "Contact" },
-        { logo: RELogo, tab: "photoreact", name: "Prophoto-react" },
+        { logo: TSLogo, tab: "tocodelist", name: "To-code-list" },
         { logo: RELogo, tab: "cryptoinfo", name: "Crypto-info" },
         { logo: RELogo, tab: "githubusers", name: "Search-github-users" },
         { logo: PYLogo, tab: "jdblogpost", name: "Jd-blogpost" },
@@ -58,7 +59,8 @@ const NavBar = ({ showPage, setShowPage, hidePage, setHidePage }) => {
                 <ActiveContainer
                     onClick={() => {
                         setShowPage("home");
-                    }}>
+                    }}
+                >
                     <img
                         src={JSIcon}
                         alt="JS Icon"
@@ -70,7 +72,8 @@ const NavBar = ({ showPage, setShowPage, hidePage, setHidePage }) => {
                 <Container
                     onClick={() => {
                         setShowPage("home");
-                    }}>
+                    }}
+                >
                     <img
                         src={JSIcon}
                         alt="JS Icon"
@@ -86,7 +89,8 @@ const NavBar = ({ showPage, setShowPage, hidePage, setHidePage }) => {
                         <ActiveContainer
                             onClick={() => {
                                 setShowPage(item.tab);
-                            }}>
+                            }}
+                        >
                             <img
                                 src={item.logo}
                                 alt={item.tab}
@@ -109,7 +113,8 @@ const NavBar = ({ showPage, setShowPage, hidePage, setHidePage }) => {
                         <Container
                             onClick={() => {
                                 setShowPage(item.tab);
-                            }}>
+                            }}
+                        >
                             <img
                                 src={item.logo}
                                 alt={item.tab}
