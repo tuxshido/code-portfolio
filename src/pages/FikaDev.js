@@ -56,16 +56,17 @@ const FikaDev = () => {
         <code>
           Fika is high-level git extension that helps team-shared development
           workflow and aligns issue management tool with git workflow <br />
-          The webpage is build with Next.js, the back-end is using Nest.js,
-          TypeORM and PostgreSQL, and the tests are made with Jest framework.{" "}
-          <br /> You can install it as a npm package or a brew package.
+          The website is build with Next.js, the back-end is using Nest.js,
+          TypeORM and PostgreSQL, and the tests are made with the Jest
+          framework. <br /> You can install it as a npm package or a brew
+          package.
           <br />
           Inside the project, I was responsible of:
           <br />• Redesign the website
           <br />• Extend the functionnality of the CLI
           <br />• Develop a Homebrew formulae, so Mac user can install Fika
           without node
-          <br />• Integration of new agile managment softwares (Jira, Asana and
+          <br />• Integration of new agile managment software (Jira, Asana and
           Linear)
           <br />• Redesign the database to work fluently with different
           managment tool

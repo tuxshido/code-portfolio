@@ -33,7 +33,7 @@ const Resume = () => {
               <br />• Redesign the website
               <br />• Extend the functionnality of the CLI
               <br />• Create a brew package
-              <br />• Integration of new agile managment softwares (Jira, Asana
+              <br />• Integration of new agile managment software (Jira, Asana
               and Linear)
               <br />• Redesign the database to work fluently with different
               managment tool
